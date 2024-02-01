@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+    <style>
+        .sidebar {
+  width: 200px;
+  float: left;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.sidebar li {
+  margin-bottom: 10px;
+}
+.sidebar li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+.sidebar li a:hover {
+  background-color: #ddd;
+}
+.content {
+  margin-left: 220px;
+  padding: 20px;
+  background-color: #fff;
+}
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="sidebar">
+              <ul>
+                <li><a href="#">Page 1</a></li>
+                <li><a href="#">Page 2</a></li>
+                <li><a href="#">Page 3</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="content">
+              <h1>This is the main content area</h1>
+              <p>This is some dummy text to show how the sidebar would work.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        $(document).ready(function() {
+  $('.sidebar li a').click(function() {
+    var page = $(this).attr('href');
+    $(this).parent().parent().load(page);
+  });
+});
+      </script>
+    
+</body>
+</html>

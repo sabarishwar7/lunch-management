@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout</title>
+    <!-- CSS only -->
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url("https://i.pinimg.com/originals/de/2e/ee/de2eeeb590f94125e1bf468aa251ace8.jpg");
+            background-repeat: repeat;
+            background-color: #ffffff;
+        }
+        #container{
+            
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            background:#ffffff;
+
+        }
+        .btn{
+          
+            display: flex;
+            flex-direction: column;
+            
+        }
+       #logout-btn{
+            
+display: flex;
+
+width: 8rem;
+height: 3rem;
+justify-content: center;
+align-items: center;
+border-radius: 20px;
+border: 2px solid rgba(0, 0, 0, 0.00);
+background: #1DB954;
+color: #fff;
+font-size: larger;
+font-weight: bolder;
+        
+        }
+
+        #logout-btn:hover{
+            background: rgba(29, 185, 84, 0.85);
+            box-shadow: 1px 1px 20px 3px #1DB954;
+            cursor: pointer;
+        }
+        .btn p{
+            padding:0px;
+            margin: 5px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: larger;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+
+            }
+                
+
+
+    </style>
+
+
+</head>
+<body>
+
+    {% include "order/navuser.html" %}
+
+    <div id="container">
+        <div class="btn">
+           <p> Confirm logout</p><br>
+            
+            <a id="logout-btn" href="login">Log out</a><br/>
+            
+        </div>
+    </div>
+    
+</body>
+</html>

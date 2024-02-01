@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <style>
+      
+.fa-2x {
+font-size: 3em;
+}
+.fa {
+position: relative;
+display: table-cell;
+width: 60px;
+height: 36px;
+text-align: center;
+vertical-align: middle;
+font-size:20px;
+
+}
+
+
+.main-menu:hover,nav.main-menu.expanded {
+width:150px;
+overflow:hidden;
+box-shadow: 3px 3px 18px 6px rgba(0, 0, 0, 0.25);
+}
+
+.main-menu {
+background:#fff;
+border-right:1px solid #e5e5e5;
+position:absolute;
+top:0;
+bottom:0;
+height:100%;
+left:0;
+width:55px;
+overflow:hidden;
+transition: 0.1s linear;
+box-shadow: 3px 3px 18px 6px rgba(0, 0, 0, 0.25);
+
+
+}
+
+.main-menu>ul {
+margin:7px 0;
+
+
+}
+
+.main-menu li {
+position:relative;
+display:block;
+width:250px;
+
+
+
+}
+
+ul:hover{
+    margin-left: 0;
+    padding-left: 0;
+}
+
+
+.main-menu li>a {
+position:relative;
+display:table;
+justify-content: space-between;
+border-collapse:collapse;
+border-spacing:0;
+color:#3a2f2f91;
+ font-family: arial;
+font-size: 20px;
+text-decoration:none;
+justify-content: space-between;
+height:60px;
+
+
+transition:all .1s linear;
+align-items: center;
+
+  
+}
+
+
+.main-menu .nav-icon {
+position:relative;
+display:table-cell;
+width:30px;
+height:30px;
+text-align:center;
+vertical-align:middle;
+font-size:18px;
+margin-right: 20px;
+padding-right: 20px;
+
+}
+ul{
+    padding-left: 15px;
+}
+
+
+.main-menu .nav-text {
+position:relative;
+display:table-cell;
+vertical-align:middle;
+width:190px;
+  font-family: 'Titillium Web', sans-serif;
+  align-items: center;
+justify-content: center;
+}
+
+
+.main-menu>ul.logout {
+position:absolute;
+left:0;
+bottom:0;
+}
+
+
+.no-touch .scrollable.hover {
+overflow-y:hidden;
+}
+
+.no-touch .scrollable.hover:hover {
+overflow-y:auto;
+overflow:visible;
+}
+
+a:hover,a:focus {
+text-decoration:none;
+font-size: 20px;
+
+}
+
+nav {
+-webkit-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+-o-user-select:none;
+user-select:none;
+}
+
+
+
+.main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
+color:#fff;
+background-color:#1DB954;
+
+display: flex;
+
+justify-content: center;
+align-items: center;
+border-radius: 5px;
+
+
+background: rgba(29, 185, 84, 0.85);
+
+color: #fff;
+cursor: pointer;
+font-size: 20px
+}
+
+/*
+
+span{
+    margin-left: 30px;
+}
+*/
+
+    </style>
+ 
+  </head>
+  <body><div class="area"></div><nav class="main-menu">
+            <ul>
+                <li>
+                    <a href="profile">
+                        <ion-icon class="nav-icon" name="person-outline"></ion-icon>
+                        <span class="nav-text">
+                           profile
+                        </span>
+                    </a>
+                  
+                </li>
+                <li class="has-subnav">
+                    <a href="food">
+                        <ion-icon class="nav-icon" name="pizza-outline"></ion-icon>
+                        <span class="nav-text">
+                           Food
+                        </span>
+                    </a>
+                    
+                </li>
+                <li class="has-subnav">
+                    <a href="snack">
+                        <ion-icon class="nav-icon" name="fast-food-outline"></ion-icon>
+                        <span class="nav-text">
+                            Snacks
+                        </span>
+                    </a>
+                    
+                </li>
+                <li class="has-subnav">
+                    <a href="drink">
+                        <ion-icon class="nav-icon" name="cafe-outline"></ion-icon>
+                        <span class="nav-text">
+                            Drinks
+                        </span>
+                    </a>
+                   
+                </li>
+            </ul>
+
+            <ul class="logout">
+                <li>
+                   <a href="logout">
+                    <ion-icon class="nav-icon" name="log-out-outline"></ion-icon>
+                        <span class="nav-text">
+                            Logout
+                        </span>
+                    </a>
+                </li  >  
+            </ul>
+        </nav>
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+    </html>

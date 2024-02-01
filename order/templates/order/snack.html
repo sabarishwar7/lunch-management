@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food</title>
+    <style>
+        body{
+            background-color: #ffffff;
+            margin-left: 75px;
+            margin-right: 10px;
+        }
+        .tbl{
+            background-color: #F5F5F5;
+            border-collapse: collapse;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            border: #d3d3d3e3;
+
+        }
+        .tbl thead{
+            color: #ffffff;
+            background-color: #1db954;
+            width: 100%;
+        
+            
+            font-size: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+
+        }
+        thead{
+            height: 2rem;
+            font-size: medium;
+        }
+        tr{
+            display: contents;
+        }
+    </style>
+</head>
+<body>
+    {% include 'order/navuser.html' %}
+
+    <form action="" method="post">
+
+    <div class="container">
+        <table class="tbl">
+            <thead>
+            <tr>
+            <th>Food <input type="search" name="" id="" placeholder="Search"></th>
+            <th>Count</th>
+            <th>Select</th>
+            
+            </tr>
+            </thead> 
+            <tfoot>
+            <tr>
+            <td colspan="3" rospan="3">
+            <div class="links" ></div>
+            </td>
+            </tr>
+            </tfoot>  
+            <tbody>
+                <td>
+                    {%for f in %}
+                    {%if f.cate=="snack"%}
+                    <tr>f.name</tr>
+                    <tr></tr>
+                    <tr></tr>
+                    
+                </td>
+            </tbody>          
+                        </table>
+    </div>
+    <input type="submit" value="">
+</form>
+</body>
+</html>

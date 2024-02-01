@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+
+    <style>
+         body{
+           background-image: url("https://i.pinimg.com/750x/b2/34/b8/b234b8bd8cdae9122431bac56dc8584d.jpg");
+            background-color: #ffffff;
+            background-repeat: no-repeat;
+                   
+            
+        }
+        #bg{
+            height: fit-content;
+            width: fit-content;
+        }  
+        .btn{
+display: flex;
+padding: 1rem ;
+width: 145px;
+height: 40px;
+justify-content: center;
+align-items: center;
+gap: 0.625rem;
+border-radius: 5rem;
+border: 2px solid rgba(0, 0, 0, 0.00);
+background: #1DB954;
+color: #fff;
+font-size: larger;
+font-weight: bolder;
+        }
+        .btn:hover{
+display: flex;
+padding: 1rem ;
+width: 145px;
+height: 40px;
+justify-content: center;
+align-items: center;
+gap: 0.625rem;
+border-radius: 1.5rem;
+border: 0px solid rgba(0, 0, 0, 0.00);
+background: rgba(29, 185, 84, 0.85);
+box-shadow: 1px 1px 20px 3px #1DB954;
+color: #fff;
+cursor: pointer;
+
+
+        }
+        #login{
+            margin-top: 10%;
+            margin-right: 15%;
+            
+            
+               }
+        li{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+       
+        #logo{
+
+            width: 30px;
+            height: 18px;
+            display: flex;
+            margin-top: 1%;
+            margin-left: 1%;
+            
+        }
+        #container{
+
+            display:flex;
+            justify-content: center;
+            align-items:center ;
+            
+        }
+
+        form{
+            border-radius: 35px;
+background: #FCFCFC;
+box-shadow: 3px 3px 18px 6px rgba(0, 0, 0, 0.25);
+width: 20rem;
+height: 30rem;
+flex-wrap: wrap;
+display: flex;
+flex-direction: column;
+padding-bottom: 15px;
+padding-top: 10px;
+align-items: center;
+margin-top: 5%;
+margin-left: 35rem;
+
+
+
+
+        }
+        form>h1{
+            font-weight: 9000;
+            font-size:35px;
+            margin-top:1.5em;
+            margin-bottom: 50px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+
+        form>p{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: 30px;
+
+        }
+        form>input{
+            border-radius: 24px;
+border: 2px solid rgba(0, 0, 0, 0.20);
+background: rgba(243, 243, 243, 0.20);
+width: 12rem;
+height: 2.5rem;
+flex-shrink: 0;
+color:  #000;
+font-size: 15px;
+padding-left: 35px;
+display: flex;
+
+
+        }
+
+        form>div{
+
+            margin: 5px 5px;
+        }
+        form>button{
+            margin-top: 15px;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <li>
+        <div id="logo">
+            <img src="https://www.securden.com/images/securden-logo.svg" alt="">
+        </div>
+        
+        </li>
+  
+
+<div id="container">
+    <form action="login" method="POST">
+        {% csrf_token %}
+
+        <h1>Log in</h1>
+        
+        <input type="text" name="e-id" class="input" placeholder="Employee id" required autocomplete autofocus><br>
+
+        <input type="password" name="password" class="input" placeholder="Password" required autocomplete><br>
+        <a href="forgotpass">Forgot Password?</a><br>
+
+        <input type="submit" class="btn"></input>
+
+        <p>New Here? <a href="register">Register</a></p><br>
+
+        {% for message in messages %}
+        
+        {{message}}
+
+        {% endfor %}
+        
+
+    </form>
+</div>
+    
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food - Register</title>
+    <style>
+        body{
+            background-image: url("https://i.pinimg.com/originals/de/2e/ee/de2eeeb590f94125e1bf468aa251ace8.jpg");
+            background-repeat: repeat;
+            background-color: #ffffff;
+                   
+            
+        }   
+        .btn{
+display: flex;
+padding: 1rem ;
+width: 145px;
+height: 40px;
+justify-content: center;
+align-items: center;
+gap: 0.625rem;
+border-radius: 5rem;
+border: 2px solid rgba(0, 0, 0, 0.00);
+background: #1DB954;
+color: #fff;
+font-size: larger;
+font-weight: bolder;
+        }
+        .btn:hover{
+display: flex;
+padding: 1rem ;
+width: 145px;
+height: 40px;
+justify-content: center;
+align-items: center;
+gap: 0.625rem;
+border-radius: 1.5rem;
+border: 0px solid rgba(0, 0, 0, 0.00);
+background: rgba(29, 185, 84, 0.85);
+box-shadow: 1px 1px 20px 3px #1DB954;
+color: #fff;
+cursor: pointer;
+
+
+        }
+        #login{
+            margin-top: 10%;
+            margin-right: 15%;
+            
+            
+               }
+        li{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+       
+        #logo{
+            
+            width: 30px;
+            height: 18px;
+            display: flex;
+            margin-top: 1%;
+            margin-left: 1%;
+           
+        }
+        #container{
+
+            display: flex;
+            justify-content: center;
+        }
+
+        form{
+            border-radius: 35px;
+background: #FCFCFC;
+box-shadow: 3px 3px 18px 6px rgba(0, 0, 0, 0.25);
+width: 20rem;
+height: 30rem;
+flex-shrink: 0;
+display: flex;
+flex-direction: column;
+padding-bottom: 15px;
+padding-top: 10px;
+align-items: center;
+margin-top: 2%;
+margin-bottom: 5%;
+
+
+
+
+        }
+        form>h2{
+            font-weight: 9000;
+            font-size:35px;
+            margin-top:1.5em;
+            margin-bottom: 50px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+        form>input{
+            border-radius: 24px;
+border: 2px solid rgba(0, 0, 0, 0.20);
+background: rgba(243, 243, 243, 0.20);
+width: 12rem;
+height: 2.5rem;
+flex-shrink: 0;
+color:  #000;
+font-size: 15px;
+padding-left: 35px;
+
+
+        }
+
+        form>div{
+
+            margin: 5px 5px;
+        }
+        form .btn{
+            margin-top: 15px;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <li>
+    <div id="logo">
+        <img src="https://www.securden.com/images/securden-logo.svg" alt="" >
+    </div>
+    <div>
+        <a href="login"><button class="btn" id="login" >Log in</button></a>
+    </div>
+    </li>
+<div id="container">
+    <form action="register" method="post">
+        {% csrf_token %}
+       
+
+        <h2>Register</h2>
+       
+        <input type="text" name="username" class="input" placeholder="Username" required autofocus><br>
+
+       
+        <input type="text" name="e_id" class="input" placeholder="Employee id" required><br>
+
+       
+        <input type="email" name="email" class="input" placeholder="E-mail" required><br>
+
+        <input type="password" name="password" class="input" placeholder="Password" required><br>
+
+        <input type="submit" class="btn"></input><br>
+
+        
+        
+
+    </form>
+
+</div>
+    
+</body>
+</html>
